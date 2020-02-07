@@ -1,37 +1,64 @@
 {% extends 'portfolio/base.html'%}
 {% block content %}
-
-
-<main role="main">
-
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1>My Name is Traivan</h1>
-      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-      <p>
-        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-      </p>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-        {% for project in projects %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{{ project.image.url }}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-text">{{ project.title }}</h5>
-              <p class="text-muted">{{ project.description|truncatechars:50}}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
+<section id="courses" class="  courses-inner pt-2 pb-2 mt-3">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="float-left">
+        <h5 class="courses-text">Courses</h5>
+      </div>
+      <div class="float-right">
+        Click to Start ! <a href="#" class="btn btn-primary btn-sm">Sing Up</a>
       </div>
     </div>
   </div>
-  </main>
-  {% endblock %}
+
+  <div class="album py-5">
+    <div class="row">
+      {% for project in projects %}
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <img src="{{ project.image.url }}" class="card-img-top" alt="..." height="100px">
+          <div class="card-body">
+            <h5 class="card-text">{{ project.title }}</h5>
+            <p class="text-muted">{{ project.description|truncatechars:50}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section id="projects" class="projects-inner">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="float-left">
+        <h5 class="courses-text">Projects</h5>
+      </div>
+      <div class="float-right">
+        Click to Start ! <a href="#" class="btn btn-primary btn-sm">Sing Up</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="album py-5">
+    <div class="row">
+      {% for project in projects %}
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <img src="{{ project.image.url }}" class="card-img-top" alt="..." height="100px">
+          <div class="card-body">
+            <h5 class="card-text">{{ project.title }}</h5>
+            <p class="text-muted">{{ project.description|truncatechars:50}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+</section>
+
+{% endblock %}

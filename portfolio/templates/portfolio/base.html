@@ -14,10 +14,11 @@
     <title>Hello, world!</title>
   </head>
   <body>
+<div class=" alert alert-info text-dark ">
+
 
     <div class="main-container">
-
-      <nav class="navbar navbar-expand-lg navbar-light ">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <h5 class="masthead-brand"><a href="{% url 'home' %}">Traivan</a></h5>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,22 +42,32 @@
         </div>
       </nav>
 
-      <!--- header banner section-->
-      <section class="header_banner">
-        <div class="banner-text">
+      <section id="banner-header" class="banner-inner row ">
+        <div class="col-md-6 text-center pt-5">
           <h1>My name is Traivan.</h1>
           <h2>I am Website Design!</h2>
+          <a href="{% url 'blog:all_blogs' %}" class="btn btn-primary btn-sm">Blogs</a>
         </div>
-        <div class="banner-image">
-          <img src="{% static 'portfolio/banner_header.jpg'%}" alt="">
+        <div class="col-md-6 text-center pt-2">
+          <img src="{% static 'portfolio/banner_header.jpg'%}" alt="" class="" width="280px;" >
         </div>
       </section>
+      <hr>
+
+
+        {% block content %}
+
+        {% endblock %}
+</div>
 
 
 
 
-    {% block content %}
-    {% endblock %}
+
+
+
+
+
 
     </div><!--end main-container-->
 
