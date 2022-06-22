@@ -2,7 +2,7 @@ asgiref==3.2.3
 certifi==2019.11.28
 Django==3.0.2
 GDAL==2.4.2
-numpy==1.17.4
+numpy==1.22.0
 Pillow==7.0.0
 pipenv==2018.11.26
 protobuf==3.11.2
