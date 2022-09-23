@@ -5,7 +5,7 @@ GDAL==2.4.2
 numpy==1.17.4
 Pillow==7.0.0
 pipenv==2018.11.26
-protobuf==3.11.2
+protobuf==3.18.3
 pytz==2019.3
 six==1.13.0
 sqlparse==0.3.0
